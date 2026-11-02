@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How Drones Fly</title>
+  <meta name="description" content="Learn what a drone is, how it works, and how its propellers create lift.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav" id="top">
+    <div class="container nav-inner">
+      <a href="#top" class="logo" aria-label="How Drones Fly home">
+        <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+          <circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="25" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="7" cy="25" r="5" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="25" cy="25" r="5" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M10.5 10.5 21.5 21.5M21.5 10.5 10.5 21.5" stroke="currentColor" stroke-width="2"/>
+          <rect x="12" y="12" width="8" height="8" rx="2" fill="var(--accent)"/>
+        </svg>
+        <span>How Drones <b>Fly</b></span>
+      </a>
+      <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="menu" class="menu">
+        <a href="#video">Video</a>
+        <a href="#what">What is a drone?</a>
+        <a href="#parts">Parts</a>
+        <a href="#how">How it works</a>
+        <a href="#propellers">Propellers</a>
+        <a href="#try">Try it</a>
+        <a href="#quiz" class="btn btn-sm">Quiz</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">A beginner's guide</p>
+          <h1>How does a drone <span class="grad">stay in the air?</span></h1>
+          <p class="lead">Learn what a drone is, what's inside one, and how four spinning propellers let it hover, climb, turn and fly in any direction.</p>
+          <div class="hero-cta">
+            <a href="#video" class="btn">▶ Watch the video</a>
+            <a href="#what" class="btn btn-ghost">Start reading →</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <svg class="drone" viewBox="0 0 400 260">
+            <g class="rotor r1"><ellipse cx="70" cy="60" rx="58" ry="8"/></g>
+            <g class="rotor r2"><ellipse cx="330" cy="60" rx="58" ry="8"/></g>
+            <g class="rotor r3"><ellipse cx="70" cy="60" rx="58" ry="8"/></g>
+            <g class="rotor r4"><ellipse cx="330" cy="60" rx="58" ry="8"/></g>
+            <path class="arm" d="M70 70 L170 120 M330 70 L230 120"/>
+            <rect class="mast" x="64" y="58" width="12" height="18" rx="3"/>
+            <rect class="mast" x="324" y="58" width="12" height="18" rx="3"/>
+            <rect class="body" x="150" y="100" width="100" height="48" rx="16"/>
+            <rect class="stripe" x="165" y="112" width="70" height="6" rx="3"/>
+            <path class="leg" d="M165 148 L150 190 M235 148 L250 190 M140 190 H175 M225 190 H260"/>
+            <rect class="gimbal" x="185" y="148" width="30" height="20" rx="4"/>
+            <circle class="lens" cx="200" cy="172" r="12"/>
+            <circle class="lens-glint" cx="204" cy="168" r="3"/>
+          </svg>
+          <div class="shadow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video -->
+    <section id="video" class="section alt">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Watch first</p>
+          <h2>The whole story in one video</h2>
+          <p class="lead center">An animated, narrated explainer covering everything on this page. Turn your sound on to hear the narration, or read along with the captions.</p>
+        </header>
+
+        <div class="player" tabindex="0" aria-label="Video player: How drones work. Space to play or pause, arrow keys to skip.">
+          <div class="screen">
+            <canvas width="960" height="540" aria-label="Animated explainer video about how drones work"></canvas>
+            <button class="big-play" aria-label="Play video">▶</button>
+          </div>
+          <div class="controls">
+            <button class="ctl play" aria-label="Play">▶</button>
+            <span class="time">0:00 / 0:00</span>
+            <div class="bar" role="slider" aria-label="Seek"><div class="fill"></div><div class="ticks"></div></div>
+            <button class="ctl voice" aria-pressed="true" title="Narration on/off (M)">🔊</button>
+            <button class="ctl cc" aria-pressed="true" title="Captions on/off (C)">CC</button>
+            <button class="ctl fs" title="Full screen (F)">⛶</button>
+          </div>
+          <div class="chapters" aria-label="Chapters"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What is a drone -->
+    <section id="what" class="section">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Chapter 1</p>
+          <h2>What is a drone?</h2>
+          <p class="lead center">A drone is an aircraft with <strong>no pilot on board</strong>. It's flown by remote control or by a computer that follows a programmed route. Engineers call it a <strong>UAV</strong>, short for <em>Unmanned Aerial Vehicle</em>.</p>
+        </header>
+
+        <div class="grid cards">
+          <article class="card">
+            <div class="icon">✳️</div>
+            <h3>Multirotor</h3>
+            <p>The most common kind. It has several propellers (usually four, a "quadcopter") and can hover in one spot. It's the focus of this guide.</p>
+          </article>
+          <article class="card">
+            <div class="icon">✈️</div>
+            <h3>Fixed-wing</h3>
+            <p>Shaped like a small airplane. Its wings make the lift, so it can fly far and for a long time, but it can't hover.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🚁</div>
+            <h3>Single-rotor</h3>
+            <p>Works like a mini helicopter: one big main rotor, plus a small tail rotor that stops the body from spinning.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🔀</div>
+            <h3>Hybrid VTOL</h3>
+            <p>Takes off straight up like a multirotor, then flies forward on wings like a plane. It gets the best of both.</p>
+          </article>
+        </div>
+
+        <div class="uses">
+          <h3>What are drones used for?</h3>
+          <ul class="chips">
+            <li>📸 Photography &amp; film</li>
+            <li>📦 Package delivery</li>
+            <li>🌾 Checking crops</li>
+            <li>🚒 Search &amp; rescue</li>
+            <li>🗺️ Mapping land</li>
+            <li>🌉 Inspecting bridges</li>
+            <li>🌪️ Weather research</li>
+            <li>🏁 Racing for fun</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parts -->
+    <section id="parts" class="section alt">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Chapter 2</p>
+          <h2>The parts of a drone</h2>
+          <p class="lead center">Tap a number or a name to see what each part does. This is a quadcopter seen from above.</p>
+        </header>
+
+        <div class="parts-layout">
+          <svg class="parts-svg" viewBox="0 0 360 360" role="img" aria-label="Top-down diagram of a quadcopter with numbered parts">
+            <g class="pd-arms">
+              <line x1="180" y1="180" x2="70" y2="70"/>
+              <line x1="180" y1="180" x2="290" y2="70"/>
+              <line x1="180" y1="180" x2="70" y2="290"/>
+              <line x1="180" y1="180" x2="290" y2="290"/>
+            </g>
+            <g class="pd-props">
+              <circle cx="70" cy="70" r="52"/><circle cx="290" cy="70" r="52"/>
+              <circle cx="70" cy="290" r="52"/><circle cx="290" cy="290" r="52"/>
+              <path d="M28 70 H112 M248 70 H332 M28 290 H112 M248 290 H332"/>
+            </g>
+            <g class="pd-motors">
+              <circle cx="70" cy="70" r="13"/><circle cx="290" cy="70" r="13"/>
+              <circle cx="70" cy="290" r="13"/><circle cx="290" cy="290" r="13"/>
+            </g>
+            <g class="pd-esc">
+              <rect x="108" y="118" width="18" height="10" rx="2" transform="rotate(45 117 123)"/>
+              <rect x="234" y="118" width="18" height="10" rx="2" transform="rotate(-45 243 123)"/>
+              <rect x="108" y="232" width="18" height="10" rx="2" transform="rotate(-45 117 237)"/>
+              <rect x="234" y="232" width="18" height="10" rx="2" transform="rotate(45 243 237)"/>
+            </g>
+            <rect class="pd-body" x="135" y="125" width="90" height="110" rx="20"/>
+            <rect class="pd-battery" x="150" y="160" width="60" height="50" rx="6"/>
+            <rect class="pd-fc" x="162" y="138" width="36" height="18" rx="3"/>
+            <circle class="pd-gps" cx="180" cy="222" r="8"/>
+            <rect class="pd-cam" x="166" y="108" width="28" height="20" rx="5"/>
+            <text class="pd-front" x="180" y="100" text-anchor="middle">FRONT</text>
+            <g class="markers"></g>
+          </svg>
+
+          <div>
+            <ol class="parts-list"></ol>
+            <div class="part-detail" aria-live="polite">
+              <h3 id="part-title">Pick a part</h3>
+              <p id="part-text">Each part has a job. Together they turn battery power into controlled flight.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="section">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Chapter 3</p>
+          <h2>How a drone works</h2>
+          <p class="lead center">A drone flies by changing the speed of each propeller, hundreds of times every second. Here's what happens between your thumb on the controller and the drone moving.</p>
+        </header>
+
+        <ol class="steps">
+          <li>
+            <span class="step-num">1</span>
+            <div>
+              <h3>You give a command</h3>
+              <p>You push a stick on the remote controller. The controller turns that into a radio signal and sends it to the drone.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            <div>
+              <h3>The receiver catches it</h3>
+              <p>A small radio receiver on the drone picks up the signal and passes your command to the flight controller.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            <div>
+              <h3>The flight controller thinks</h3>
+              <p>This little computer is the drone's brain. It compares what you asked for with what its sensors say the drone is actually doing, then works out how fast each motor should spin.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">4</span>
+            <div>
+              <h3>The ESCs power the motors</h3>
+              <p>Electronic Speed Controllers (ESCs) take battery power and feed each motor exactly the right amount to reach the speed the flight controller asked for.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">5</span>
+            <div>
+              <h3>The propellers push air</h3>
+              <p>The spinning propellers push air downward, which pushes the drone upward. Making some propellers faster than others tilts or turns the drone.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">↻</span>
+            <div>
+              <h3>Repeat, very fast</h3>
+              <p>This loop runs <strong>hundreds to thousands of times per second</strong>. That's why a drone can hold steady in a gust of wind: it corrects itself far faster than a human could.</p>
+            </div>
+          </li>
+        </ol>
+
+        <h3 class="sub-head">The sensors that keep it balanced</h3>
+        <div class="grid sensors">
+          <div class="sensor"><strong>Gyroscope</strong><p>Measures how fast the drone is rotating or tipping.</p></div>
+          <div class="sensor"><strong>Accelerometer</strong><p>Feels which way is down and how quickly the drone speeds up.</p></div>
+          <div class="sensor"><strong>Barometer</strong><p>Measures air pressure to work out height.</p></div>
+          <div class="sensor"><strong>GPS</strong><p>Uses satellites to find where the drone is on Earth.</p></div>
+          <div class="sensor"><strong>Compass</strong><p>Tells the drone which direction it's facing.</p></div>
+        </div>
+
+        <div class="callout">
+          <h3>Thrust vs. weight</h3>
+          <p>Gravity always pulls the drone down. The propellers push up with a force called <strong>thrust</strong>.</p>
+          <ul>
+            <li><strong>Thrust = weight</strong> → the drone <em>hovers</em></li>
+            <li><strong>Thrust &gt; weight</strong> → the drone <em>climbs</em></li>
+            <li><strong>Thrust &lt; weight</strong> → the drone <em>descends</em></li>
+          </ul>
+          <p>To move sideways, the drone <strong>tilts</strong>. Some of the thrust then points sideways and pushes the drone that way, like leaning forward to start running.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Propellers -->
+    <section id="propellers" class="section alt">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Chapter 4</p>
+          <h2>What propellers do, and how</h2>
+          <p class="lead center">The propellers are where a drone's lift comes from. Each blade is really a tiny spinning wing.</p>
+        </header>
+
+        <div class="prop-grid">
+          <div class="prop-text">
+            <h3>What they do</h3>
+            <p>A propeller's job is to make <strong>thrust</strong>, a force that pushes the drone up. It does this by grabbing air and throwing it <strong>downward</strong>.</p>
+            <p>Isaac Newton's third law says every action has an equal and opposite reaction. Push air down, and the air pushes the propeller (and the drone) <strong>up</strong>. You can feel this "downwash" if you hold your hand under a flying drone.</p>
+
+            <h3>How they work</h3>
+            <p>Look at a slice of a propeller blade (right). It's curved and tilted, just like an airplane wing. As the blade slices through the air:</p>
+            <ul class="ticks">
+              <li>The <strong>tilt</strong> (called the <em>angle of attack</em>) deflects air downward.</li>
+              <li>Air flowing over the curved top speeds up, which makes <strong>lower pressure</strong> above the blade.</li>
+              <li>The air below has <strong>higher pressure</strong>, so the blade is pushed from high to low: upward.</li>
+            </ul>
+            <p>Spin faster and the push gets much stronger. Doubling a propeller's speed gives roughly <strong>four times</strong> the thrust.</p>
+          </div>
+
+          <figure class="airfoil-fig">
+            <svg viewBox="0 0 500 300" role="img" aria-label="Cross-section of a propeller blade with air flowing over and under it">
+              <defs>
+                <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                  <path d="M0 0 L10 5 L0 10 z" class="arrow-head"/>
+                </marker>
+              </defs>
+              <text class="af-label low" x="250" y="40" text-anchor="middle">Lower pressure</text>
+              <path class="flow" d="M10 95 C 120 95, 160 70, 260 75 S 420 120, 490 150"/>
+              <path class="flow" d="M10 125 C 110 125, 160 105, 260 108 S 420 145, 490 175"/>
+              <path class="flow" d="M10 205 C 120 205, 200 195, 300 200 S 430 215, 490 240"/>
+              <path class="flow" d="M10 235 C 120 235, 200 228, 300 232 S 430 250, 490 270"/>
+              <path class="airfoil" d="M70 165 C 70 140, 120 128, 200 128 C 290 128, 380 145, 450 182 C 360 172, 260 170, 180 176 C 120 180, 70 185, 70 165 Z"/>
+              <text class="af-label high" x="250" y="290" text-anchor="middle">Higher pressure</text>
+              <line class="lift" x1="250" y1="150" x2="250" y2="55" marker-end="url(#arrow)"/>
+              <text class="af-tag" x="262" y="62">LIFT</text>
+              <line class="push" x1="440" y1="205" x2="470" y2="268" marker-end="url(#arrow)"/>
+              <text class="af-tag small" x="330" y="262">air pushed down</text>
+              <text class="af-tag small" x="20" y="160">air →</text>
+            </svg>
+            <figcaption>A slice through one propeller blade. Air flows past it as it spins.</figcaption>
+          </figure>
+        </div>
+
+        <div class="grid prop-cards">
+          <article class="card">
+            <h3>Size &amp; pitch</h3>
+            <p>Propellers are labelled with two numbers, like <strong>5×4.5</strong>. The first is the <strong>diameter</strong> (5 inches across). The second is the <strong>pitch</strong>: how far the propeller would move forward in one turn if it screwed through the air like a screw through wood (4.5 inches).</p>
+            <p>Bigger or higher-pitch propellers move more air per turn. That means more thrust, but the motor has to work harder and the battery drains faster.</p>
+          </article>
+          <article class="card">
+            <h3>Number of blades</h3>
+            <p>Two blades are the most efficient, which is good for long flights. Three or four blades grab more air at the same size, giving more grip and quicker reactions, which is why racing drones often use them.</p>
+          </article>
+          <article class="card">
+            <h3>Why two spin each way</h3>
+            <div class="spin-mini" aria-hidden="true">
+              <span class="cw">↻</span><span class="ccw">↺</span><span class="ccw">↺</span><span class="cw">↻</span>
+            </div>
+            <p>A spinning propeller tries to twist the drone the <em>opposite</em> way (this twist is called <strong>torque</strong>). If all four spun the same way, the drone would spin like a top. So two propellers spin clockwise and two spin counter-clockwise, and their twists cancel out.</p>
+          </article>
+        </div>
+
+        <div class="callout">
+          <h3>How four propellers steer a drone</h3>
+          <p>A quadcopter has no rudder or wings to steer with. It moves only by changing how fast each propeller spins:</p>
+          <ul>
+            <li><strong>Up / down (throttle):</strong> all four speed up or slow down together.</li>
+            <li><strong>Forward / back (pitch):</strong> the back pair spins faster, so the drone tips its nose down and flies forward.</li>
+            <li><strong>Left / right (roll):</strong> one side spins faster, so the drone leans and slides toward the slower side.</li>
+            <li><strong>Turning (yaw):</strong> the clockwise pair and the counter-clockwise pair spin at different speeds, so their twists no longer cancel and the drone rotates on the spot.</li>
+          </ul>
+          <a href="#try" class="btn btn-sm">See it in action →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive demo -->
+    <section id="try" class="section">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Chapter 5</p>
+          <h2>Try the controls</h2>
+          <p class="lead center">Pick a move and watch how each propeller's speed changes. Faster propellers spin faster and glow brighter.</p>
+        </header>
+
+        <div class="demo">
+          <div class="demo-stage">
+            <svg class="quad" viewBox="0 0 300 300" aria-label="Quadcopter seen from above">
+              <g class="quad-body">
+                <line class="q-arm" x1="150" y1="150" x2="70" y2="70"/>
+                <line class="q-arm" x1="150" y1="150" x2="230" y2="70"/>
+                <line class="q-arm" x1="150" y1="150" x2="70" y2="230"/>
+                <line class="q-arm" x1="150" y1="150" x2="230" y2="230"/>
+                <g class="q-rotor" data-rotor="fl" data-dir="cw">
+                  <circle class="q-disc" cx="70" cy="70" r="46"/>
+                  <g class="q-blade"><rect x="26" y="66" width="88" height="8" rx="4"/></g>
+                  <text x="70" y="128" text-anchor="middle" class="q-dir">↻ CW</text>
+                </g>
+                <g class="q-rotor" data-rotor="fr" data-dir="ccw">
+                  <circle class="q-disc" cx="230" cy="70" r="46"/>
+                  <g class="q-blade"><rect x="186" y="66" width="88" height="8" rx="4"/></g>
+                  <text x="230" y="128" text-anchor="middle" class="q-dir">↺ CCW</text>
+                </g>
+                <g class="q-rotor" data-rotor="rl" data-dir="ccw">
+                  <circle class="q-disc" cx="70" cy="230" r="46"/>
+                  <g class="q-blade"><rect x="26" y="226" width="88" height="8" rx="4"/></g>
+                  <text x="70" y="180" text-anchor="middle" class="q-dir">↺ CCW</text>
+                </g>
+                <g class="q-rotor" data-rotor="rr" data-dir="cw">
+                  <circle class="q-disc" cx="230" cy="230" r="46"/>
+                  <g class="q-blade"><rect x="186" y="226" width="88" height="8" rx="4"/></g>
+                  <text x="230" y="180" text-anchor="middle" class="q-dir">↻ CW</text>
+                </g>
+                <rect class="q-core" x="120" y="115" width="60" height="70" rx="14"/>
+                <path class="q-nose" d="M150 100 L162 116 H138 Z"/>
+              </g>
+            </svg>
+            <p class="front-label">▲ front</p>
+          </div>
+
+          <div class="demo-panel">
+            <div class="moves" role="group" aria-label="Choose a move"></div>
+            <div class="meters">
+              <div class="meter" data-meter="fl"><span>Front-left</span><div><i></i></div><b>60%</b></div>
+              <div class="meter" data-meter="fr"><span>Front-right</span><div><i></i></div><b>60%</b></div>
+              <div class="meter" data-meter="rl"><span>Rear-left</span><div><i></i></div><b>60%</b></div>
+              <div class="meter" data-meter="rr"><span>Rear-right</span><div><i></i></div><b>60%</b></div>
+            </div>
+            <div class="explain" aria-live="polite">
+              <h3 id="move-title">Hover</h3>
+              <p id="move-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz -->
+    <section id="quiz" class="section alt">
+      <div class="container narrow">
+        <header class="section-head">
+          <p class="eyebrow">Check yourself</p>
+          <h2>Quick quiz</h2>
+        </header>
+        <div class="quiz"></div>
+        <p class="quiz-score" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>How Drones Fly · a beginner's guide to flying machines</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="narration.js"></script>
+  <script src="audio/timing.js"></script>
+  <script src="video.js"></script>
+</body>
+</html>
